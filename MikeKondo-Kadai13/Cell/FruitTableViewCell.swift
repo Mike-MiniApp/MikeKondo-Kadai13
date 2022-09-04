@@ -19,9 +19,7 @@ class FruitTableViewCell: UITableViewCell {
         didSet {
             guard let fruit = fruit else { return }
             fruitNameLabel.text = fruit.name
-            if fruit.isCheck {
-                checkImageView.image = UIImage(named: "check")
-            }
+            checkImageView.isHidden = !fruit.isCheck
         }
     }
 }

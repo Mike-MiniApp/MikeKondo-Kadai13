@@ -11,14 +11,20 @@ class ViewController: UIViewController {
     // MARK: - UI Parts
     @IBOutlet private weak var fruitTableView: UITableView!
 
-    let fruits = (0..<1).flatMap { _ in
-        [
-            Fruit(name: "りんご", isCheck: false),
-            Fruit(name: "みかん", isCheck: true),
-            Fruit(name: "バナナ", isCheck: false),
-            Fruit(name: "パイナップル", isCheck: true)
-        ]
-    }
+    // MARK: あきおさんに提案させていただいたコード
+//    private let fruits = (0..<10).flatMap { _ in
+//        [
+//            Fruit(name: "りんご", isCheck: false),
+//            Fruit(name: "みかん", isCheck: true),
+//            Fruit(name: "バナナ", isCheck: false),
+//            Fruit(name: "パイナップル", isCheck: true)
+//        ]
+//    }
+
+    private let fruits = [Fruit(name: "りんご", isCheck: false),
+                  Fruit(name: "みかん", isCheck: true),
+                  Fruit(name: "バナナ", isCheck: false),
+                  Fruit(name: "パイナップル", isCheck: true)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
