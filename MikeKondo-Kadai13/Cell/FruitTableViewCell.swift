@@ -15,11 +15,8 @@ class FruitTableViewCell: UITableViewCell {
     static let identifier = "fruitCell"
     static let nibName = "FruitTableViewCell"
 
-    var fruit: Fruit? {
-        didSet {
-            guard let fruit = fruit else { return }
-            fruitNameLabel.text = fruit.name
-            checkImageView.isHidden = !fruit.isCheck
-        }
+    func configure(fruit: Fruit) {
+        fruitNameLabel.text = fruit.name
+        checkImageView.isHidden = !fruit.isCheck
     }
 }
