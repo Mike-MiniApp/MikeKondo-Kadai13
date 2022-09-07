@@ -42,7 +42,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FruitTableViewCell.identifier, for: indexPath) as? FruitTableViewCell else { fatalError("The dequeued cell is not instance") }
-        cell.fruit = fruits[indexPath.row]
+        cell.configure(fruit: fruits[indexPath.row])
         return cell
     }
 
